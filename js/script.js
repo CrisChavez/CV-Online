@@ -1,6 +1,6 @@
 /* ============================== typing animation ============================ */
 var typed = new Typed(".typing",{
-    strings:["   ","Licenciado en Planificación Logística","Master en Gestión de la Producción y Gerencia de Logística","Diplomado en BI, Big Data y Analytics","Data Analyst."],
+    strings:["","Licenciado en Planificación Logística","Master en Gestión de la Producción y Gerencia de Logística","Diplomado en BI, Big Data y Analytics","Data Analyst."],
     typeSpeed:100,
     BackSpeed:60,
     loop:true
