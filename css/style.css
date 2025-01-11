@@ -786,7 +786,7 @@ h3.my-profession
     height: 50px;
     padding: 0 50px;
 }
-@media (max-width:1199px)
+/* @media (max-width:1199px)
 {
     .section .container
     {
@@ -856,45 +856,78 @@ h3.my-profession
         flex: 0 0 100%;
         max-width: 100%;
     }
-}
+} */
 
 /* Mobile Config */
 
-@media (max-width:575px) {
+@media (max-width: 1199px) {
     .section .container {
-        padding-top: 50px; /* Reduce espacio superior */
+        padding-top: 70px;
     }
-
     .aside {
-        left: -240px; /* Ajusta tamaño de aside para pantallas pequeñas */
+        left: -270px;
     }
-
     .aside.open {
         left: 0;
     }
-
     .aside .nav-toggler {
-        left: 20px; /* Mejor ubicación en pantallas pequeñas */
+        display: flex;
+        left: 30px;
     }
-
     .aside .nav-toggler.open {
-        left: 260px;
+        left: 300px;
     }
-
     .section {
         left: 0;
     }
-
     .section.open {
-        left: 240px;
+        left: 270px;
     }
-
     .about .about-content .personal-info .info-item p span {
         display: block;
         margin-left: 0;
-        font-size: 14px; /* Reduce el tamaño del texto */
     }
+}
 
+@media (max-width: 991px) {
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .home .home-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img {
+        display: none;
+    }
+    .aside .nav-toggler {
+        display: flex; /* Mostrar botón hamburguesa */
+        position: fixed;
+        top: 20px;
+        left: 15px;
+        z-index: 100;
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+    }
+    .aside .nav-toggler.open {
+        left: 270px; /* Ajuste para el menú abierto */
+    }
+    .section {
+        margin-left: 0;
+        transition: margin-left 0.3s ease-in-out;
+    }
+    .section.open {
+        margin-left: 270px; /* Espacio para el menú abierto */
+    }
+}
+
+@media (max-width: 767px) {
     .contact .contact-form .col-6,
     .contact .contact-info-item,
     .portfolio .portfolio-item,
@@ -905,66 +938,10 @@ h3.my-profession
     .about .about-content .personal-info {
         flex: 0 0 100%;
         max-width: 100%;
-        margin-bottom: 15px; /* Agrega espacio entre elementos */
-    }
-
-    .contact .contact-info-item h4 {
-        font-size: 16px; /* Ajusta el tamaño del encabezado */
-    }
-
-    .home .home-info {
-        font-size: 14px; /* Texto más pequeño para mejor visualización */
-    }
-
-    .home .home-img {
-        display: none; /* Oculta imágenes grandes para optimizar espacio */
-    }
-}
-
-@media (max-width:480px) {
-    .section .container {
-        padding-top: 40px;
-    }
-
-    .aside {
-        left: -220px;
-    }
-
-    .aside.open {
-        left: 0;
     }
 
     .aside .nav-toggler {
-        left: 15px;
-    }
-
-    .aside .nav-toggler.open {
-        left: 240px;
-    }
-
-    .section {
-        left: 0;
-    }
-
-    .section.open {
-        left: 220px;
-    }
-
-    .about .about-content .personal-info .info-item p span {
-        font-size: 12px; /* Texto más pequeño para pantallas más pequeñas */
-    }
-
-    .contact .contact-info-item h4 {
-        font-size: 14px;
-    }
-
-    .home .home-info {
-        font-size: 12px;
-    }
-
-    .contact .contact-info-item,
-    .portfolio .portfolio-item,
-    .service .service-item {
-        padding: 10px; /* Reduce el relleno para ahorrar espacio */
+        top: 15px;
+        left: 10px;
     }
 }
