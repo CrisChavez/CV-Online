@@ -857,3 +857,114 @@ h3.my-profession
         max-width: 100%;
     }
 }
+
+/* Mobile Config */
+
+@media (max-width:575px) {
+    .section .container {
+        padding-top: 50px; /* Reduce espacio superior */
+    }
+
+    .aside {
+        left: -240px; /* Ajusta tamaño de aside para pantallas pequeñas */
+    }
+
+    .aside.open {
+        left: 0;
+    }
+
+    .aside .nav-toggler {
+        left: 20px; /* Mejor ubicación en pantallas pequeñas */
+    }
+
+    .aside .nav-toggler.open {
+        left: 260px;
+    }
+
+    .section {
+        left: 0;
+    }
+
+    .section.open {
+        left: 240px;
+    }
+
+    .about .about-content .personal-info .info-item p span {
+        display: block;
+        margin-left: 0;
+        font-size: 14px; /* Reduce el tamaño del texto */
+    }
+
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 15px; /* Agrega espacio entre elementos */
+    }
+
+    .contact .contact-info-item h4 {
+        font-size: 16px; /* Ajusta el tamaño del encabezado */
+    }
+
+    .home .home-info {
+        font-size: 14px; /* Texto más pequeño para mejor visualización */
+    }
+
+    .home .home-img {
+        display: none; /* Oculta imágenes grandes para optimizar espacio */
+    }
+}
+
+@media (max-width:480px) {
+    .section .container {
+        padding-top: 40px;
+    }
+
+    .aside {
+        left: -220px;
+    }
+
+    .aside.open {
+        left: 0;
+    }
+
+    .aside .nav-toggler {
+        left: 15px;
+    }
+
+    .aside .nav-toggler.open {
+        left: 240px;
+    }
+
+    .section {
+        left: 0;
+    }
+
+    .section.open {
+        left: 220px;
+    }
+
+    .about .about-content .personal-info .info-item p span {
+        font-size: 12px; /* Texto más pequeño para pantallas más pequeñas */
+    }
+
+    .contact .contact-info-item h4 {
+        font-size: 14px;
+    }
+
+    .home .home-info {
+        font-size: 12px;
+    }
+
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item {
+        padding: 10px; /* Reduce el relleno para ahorrar espacio */
+    }
+}
